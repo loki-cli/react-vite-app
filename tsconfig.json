@@ -1,0 +1,59 @@
+{
+  // TypeScript编译器选项
+  "compilerOptions": {
+    // 指定ECMAScript目标版本
+    "target": "ESNext", // 将目标设为ESNext，支持最新的ECMAScript版本
+
+    // 包含的库
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], // 包括DOM、DOM.Iterable和ESNext库
+
+    // 包含的类型声明文件
+    "types": ["vite/client"], // 添加Vite的类型定义
+
+    // 允许编译JavaScript文件
+    "allowJs": false, // 禁用JavaScript文件编译
+
+    // 忽略库文件的类型检查
+    "skipLibCheck": true, // 跳过所有声明文件（*.d.ts）的类型检查
+
+    // 允许默认导入与CommonJS和ES模块之间的兼容性
+    "esModuleInterop": true, // 启用es模块与CommonJS模块的互操作性
+
+    // 允许从没有默认导出的模块中默认导入（与esModuleInterop一起使用）
+    "allowSyntheticDefaultImports": true, // 允许从没有默认导出的模块中导入默认成员
+
+    // 启用所有严格类型检查选项
+    "strict": true, // 启用所有严格类型检查选项
+
+    // 在文件名中强制一致的大小写
+    "forceConsistentCasingInFileNames": true, // 在Windows上的文件系统中强制文件名一致
+
+    // 指定模块代码生成方式
+    "module": "ESNext", // 使用新的ES模块语法
+
+    // 指定模块解析策略
+    "moduleResolution": "Node", // 使用Node的模块解析策略
+
+    // 允许导入JSON模块
+    "resolveJsonModule": true, // 允许导入.json文件
+
+    // 启用独立模块支持
+    "isolatedModules": true, // 每个文件作为单独的模块进行编译
+
+    // 禁止生成编译结果
+    "noEmit": true, // 不生成任何作为输出的文件
+
+    // 指定JSX代码生成方式
+    "jsx": "react-jsx", // 使用新的React JSX转换
+
+    // 基础路径，用于解析非相对模块名称
+    "baseUrl": ".", // 设置模块解析的基本路径
+
+    // 模块路径映射
+    "paths": {
+      "@/*": ["src/*"] // 设置路径别名，将"@"映射到项目的源代码目录
+    }
+  },
+  // 指定哪些文件需要包含在编译过程中
+  "include": ["src"] // 只编译src目录下的文件
+}
